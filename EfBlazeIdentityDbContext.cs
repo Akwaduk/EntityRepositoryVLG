@@ -11,6 +11,4 @@ public class EfBlazeIdentityDbContext<TUser> : IdentityDbContext<TUser>
         : base(options) 
     {
     }
-
-    // Other DbContext code here
 }
