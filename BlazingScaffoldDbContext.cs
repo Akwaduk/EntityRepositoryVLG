@@ -30,10 +30,12 @@ public class BlazingScaffoldDbContext<TUser> : IdentityDbContext<TUser>
         {
             if (entry.State == EntityState.Added || entry.State == EntityState.Modified)
             {
-                var auditEntry = new LoggedItem 
+                var tableName = entry?.Metadata?.GetTableName();
+                if (tableName == null) tableName = "unknown";
+                var auditEntry = new LoggedItem
                 {
-                    TableName = entry.Metadata.GetTableName(),
-                    ChangeTime = DateTime.UtcNow,
+                    ItemIdentifier = Guid.NewGuid(), // Add the ItemIdentifier property
+                    TableName = tableName,                  
                     UserId = userId,
                     OperationType = entry.State == EntityState.Added ? "Add" : "Update"
                 };
