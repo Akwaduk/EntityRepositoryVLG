@@ -1,3 +1,4 @@
+using BlazingScaffolds.Models;
 using Microsoft.AspNetCore.Identity;
 namespace BlazingScaffolds.Gates;
 public interface IsGated

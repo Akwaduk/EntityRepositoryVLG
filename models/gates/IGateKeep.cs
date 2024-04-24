@@ -1,3 +1,5 @@
+using BlazingScaffolds.Models;
+
 namespace BlazingScaffolds.Gates;
 public interface IGateKeep<T> where T : BaseItem
 {

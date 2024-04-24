@@ -9,10 +9,12 @@ public class BlazingScaffoldDbContext<TUser> : IdentityDbContext<TUser>
     where TUser : IdentityUser
 {
     private readonly UserManager<TUser> _userManager;
-
-    public BlazingScaffoldDbContext(DbContextOptions options, UserManager<TUser> userManager)
+    private readonly HttpContextAccessor _httpContextAccessor;
+    public BlazingScaffoldDbContext(DbContextOptions options, UserManager<TUser> userManager,
+     HttpContextAccessor httpContextAccessor)
         : base(options)
     {
+        _httpContextAccessor = httpContextAccessor;
         _userManager = userManager;
     }
     private List<LoggedItem> OnBeforeSaveChanges()
@@ -21,14 +23,14 @@ public class BlazingScaffoldDbContext<TUser> : IdentityDbContext<TUser>
         var auditEntries = new List<LoggedItem>();
 
         // Get the current user ID
-        var userId = _userManager.GetUserId(_httpContextAccessor?.HttpContext?.User)
+        var userId = _userManager.GetUserId(_httpContextAccessor.HttpContext.User)
                      ?? "Anonymous";
 
         foreach (var entry in ChangeTracker.Entries())
         {
             if (entry.State == EntityState.Added || entry.State == EntityState.Modified)
             {
-                var auditEntry = new AuditEntry
+                var auditEntry = new LoggedItem 
                 {
                     TableName = entry.Metadata.GetTableName(),
                     ChangeTime = DateTime.UtcNow,

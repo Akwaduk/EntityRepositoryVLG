@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EntityRepositoryVLG")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+cb0a5faba3be316bd471fce96df67af70d64af01")]
 [assembly: System.Reflection.AssemblyProductAttribute("EntityRepositoryVLG")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EntityRepositoryVLG")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

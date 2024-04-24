@@ -1,6 +1,7 @@
 using System;
 using System.Reflection.Metadata;
-using BlazingScaffolds.Services.Gates;
+using BlazingScaffolds.Gates;
+using BlazingScaffolds.Models;
 using Microsoft.AspNetCore.Authentication;
 using Microsoft.EntityFrameworkCore;
 

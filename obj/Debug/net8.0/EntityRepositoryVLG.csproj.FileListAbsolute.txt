@@ -1,0 +1,6 @@
+C:\src\EntityRepositoryVLG\obj\Debug\net8.0\EntityRepositoryVLG.csproj.AssemblyReference.cache
+C:\src\EntityRepositoryVLG\obj\Debug\net8.0\EntityRepositoryVLG.GeneratedMSBuildEditorConfig.editorconfig
+C:\src\EntityRepositoryVLG\obj\Debug\net8.0\EntityRepositoryVLG.AssemblyInfoInputs.cache
+C:\src\EntityRepositoryVLG\obj\Debug\net8.0\EntityRepositoryVLG.AssemblyInfo.cs
+C:\src\EntityRepositoryVLG\obj\Debug\net8.0\EntityRepositoryVLG.csproj.CoreCompileInputs.cache
+C:\src\EntityRepositoryVLG\obj\Debug\net8.0\EntityRepositoryVLG.sourcelink.json
